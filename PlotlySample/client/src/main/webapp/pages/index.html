@@ -3,11 +3,13 @@
     <head>
         <title>Charts test</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <script type='text/javascript' src ="http://ajax.aspnetcdn.com/ajax/knockout/knockout-3.4.0.js"></script>
+        
     </head>
     
     <body>
-        <script type='text/javascript' src ="http://ajax.aspnetcdn.com/ajax/knockout/knockout-3.4.0.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+        <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.0/knockout-min.js'></script>
+        <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
         <div id="scatter" style="width: 480px; height: 400px;"><!-- Plotly chart will be drawn inside this DIV --></div>
         <div id="timeScatter" style="width: 480px; height: 400px;"><!-- Plotly chart will be drawn inside this DIV --></div>
         <div id="histogram" style="width: 480px; height: 400px;"><!-- Plotly chart will be drawn inside this DIV --></div><br>
@@ -19,5 +21,14 @@
         <div id="pie" style="width: 400px; height:500px;"></div>
         <div id="contour" style="width: 400px; height:500px"></div>
         <div id="scatter3d" style="width: 480px; height: 400px;"><!-- Plotly chart will be drawn inside this DIV --></div>
+        <div id="tester" style="width:600px;height:250px;"></div>
+        <script>
+	TESTER = document.getElementById('tester');
+            Plotly.plot( TESTER, [{
+            x: [1, 2, 3, 4, 5],
+            y: [1, 2, 4, 8, 16] }], {
+            margin: { t: 0 } } );
+        </script>
+        <!-- ${browser.bootstrap} -->
     </body>
 </html>
